@@ -1,0 +1,40 @@
+body{
+    background-image: url(/cards-4423509_1920.jpg);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color :white;
+    font-weight: bold;
+    background-size: cover;
+
+
+}
+
+button{
+
+    border: none;
+    padding: 10px 10px;
+    color: #016f01;
+
+    font-weight: bold;
+    width: 200px;
+    background-color: goldenrod;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+
+
+}
+h1{
+    color: goldenrod;
+    
+    font-size: 80px;
+}
+
+#message-el
+{
+  
+  color: black
+  ;  font-size: large;
+    font-style: italic;
+
+}
