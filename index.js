@@ -1,12 +1,20 @@
-let firstcard=5;
-let secondcard=11;
+let firstcard= getrandnum();
+let secondcard= getrandnum();
 
 let isalive=true;
 let message="";
 let hasblackjack=false;
 let sum=firstcard+secondcard;
-let card1;
-let card2;
+
+let arr =[firstcard,secondcard];
+let cardel=document.getElementById("card-el");
+
+
+function getrandnum()
+{
+   return 2+ Math.floor(Math.random()*10);
+}
+
 function gamestart()
 {
    if(sum<=20)
@@ -25,11 +33,18 @@ function gamestart()
     message="you are out of the game";
     isalive=false;
    }
+   cardel.textContent="cards : "
+   let size=arr.length;
+
    
-   card1=document.getElementById("c1");
-   card2=firstcard +" "+ secondcard ;
-    card1.textContent=card2
-   // document.getElementById("c2").textContent=secondcard;
+
+   for(let i=0;i<size;i++)
+   cardel.textContent+=arr[i] +" ";
+
+  
+
+
+
    let store=document.getElementById("sum-el");
    store.textContent=sum;
 
@@ -37,17 +52,22 @@ function gamestart()
  res.textContent=message;
 }
 
-let card=5;
+
 
 function newgame()
 {
-
+   let card= getrandnum();
+   arr.push(card);
    // document.getElementById("message-el").textContent='Want to play a round? ';
    // document.getElementById("c1").textContent="";
    // document.getElementById("c2").textContent="";
    // document.getElementById("sum-el").textContent="";
    sum+=card;
 gamestart();
-card1.textContent=card2+ " "+  card;
+// card1.textContent=card2+ " "+  card;
+
+
+
+// console.log(arr);
 
 }
